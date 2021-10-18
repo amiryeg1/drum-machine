@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import DrumPadContainer from "./components/Drum_pad_container";
+import { useSelector } from "react-redux";
 function App() {
+  const audioString = useSelector((event) => event.audio.value);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" id="drum-machine">
+      <h1>drum machine</h1>
+      <DrumPadContainer />
+      <br/>
+      <span id="display">{audioString}</span>
     </div>
   );
 }

@@ -1,0 +1,21 @@
+.drum-pad {
+    font: inherit;
+    border: 1px solid #9c919e;
+    background: #4f005f;
+    color: white;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+    width: 100px;
+    height:100px;
+    
+  }
+  
+  .drum-pad:hover,
+  .drum-pad:active {
+    background: #741188;
+    border-color: #000;
+  }
+  
+  .drum-pad:focus {
+    outline: none;
+  }
