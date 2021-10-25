@@ -1,7 +1,7 @@
-import logo from "./logo.svg";
-import "./App.css";
 import DrumPadContainer from "./components/Drum_pad_container";
 import { useSelector } from "react-redux";
+import "./App.css";
+
 function App() {
   const audioString = useSelector((event) => event.audio.value);
   return (

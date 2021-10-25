@@ -1,8 +1,8 @@
-import { useEffect } from "react";
-import { keyList } from "./Drum_pad_container";
-import "./drum-pad.css";
-import { useDispatch } from "react-redux";
 import { setAudioString } from "../store/audio-string-slice";
+import { keyList } from "./Drum_pad_container";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import "./drum-pad.css";
 
 
 const DrumPad = (props) => {
@@ -10,6 +10,7 @@ const dispatch = useDispatch()
   var audio;
 
   useEffect(() => {
+    // eslint-disable-next-line
     audio = document.getElementById(props.keyWord);
   });
   const playAudio = () => {
